@@ -16,7 +16,7 @@ export default function App() {
 
           <ul>
             {ways.map((way) => (
-              <WayToTeach {...way} />
+              <WayToTeach key={way.title} {...way} />
             ))}
           </ul>
         </section>
