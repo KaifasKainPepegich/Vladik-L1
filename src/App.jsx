@@ -24,13 +24,19 @@ export default function App() {
         <section>
           <h3>Чем мы отличаемся от других</h3>
 
-          <Button onClick={() => setContentType('way')}>Подход</Button>
-          <Button onClick={() => setContentType('easy')}>Доступность</Button>
-          <Button onClick={() => setContentType('program')}>Концентрация</Button>
+          <Button isActive={contentType === 'way'} onClick={() => setContentType('way')}>
+            Подход
+          </Button>
+          <Button isActive={contentType === 'easy'} onClick={() => setContentType('easy')}>
+            Доступность
+          </Button>
+          <Button isActive={contentType === 'program'} onClick={() => setContentType('program')}>
+            Концентрация
+          </Button>
 
-          {contentType ? <p>{differences[contentType]}</p> : <p>нажми на кнопку</p>}
+          {!contentType && <p>нажми на кнопку</p>}
 
-          <p>{differences[contentType]}</p>
+          {contentType && <p>{differences[contentType]}</p>}
         </section>
       </main>
     </>

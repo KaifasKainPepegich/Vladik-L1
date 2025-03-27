@@ -6,19 +6,12 @@
   transition: all 0.3s;
   font-weight: bold;
   margin-right: 1rem;
-  background: #3e6ae1;
-  color: #fff;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
-/* .button:hover {
+.button:hover {
   opacity: 0.8;
-} */
-
-/* .button.active {
+}
+.button.active {
   background: #3e6ae1;
   color: #fff;
-} */
+}

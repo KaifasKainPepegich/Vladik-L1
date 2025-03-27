@@ -1,8 +1,8 @@
-import classes from './Button.module.scss'
+import styles from './Button.module.scss'
 
-export default function Button({ children, onClick }) {
+export default function Button({ children, onClick, isActive }) {
   return (
-    <button className={classes.button} onClick={onClick}>
+    <button className={`${styles.button} ${isActive ? styles.active : ''}`} onClick={onClick}>
       {children}
     </button>
   )
