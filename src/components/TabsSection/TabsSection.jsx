@@ -1,11 +1,13 @@
-import Button from '../Button/Button'
+import { Button } from '../Button/Button'
+import style from './TabsSection.module.scss'
 
-export function TabsSection({ active, onChange }) {
+export const TabsSection = ({ active, onChange }) => {
   return (
-    <section style={{ marginBottom: '2rem' }}>
+    <section className={style.section}>
       <Button isActive={active === 'main'} onClick={() => onChange('main')}>
         Главная
       </Button>
+
       <Button isActive={active === 'feedback'} onClick={() => onChange('feedback')}>
         Обратная связь
       </Button>

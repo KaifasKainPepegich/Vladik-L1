@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
 
-// TODO разбить на компоненты SCSS
-
 * {
   margin: 0;
   padding: 0;

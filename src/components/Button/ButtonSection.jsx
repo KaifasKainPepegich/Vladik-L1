@@ -1,27 +1,29 @@
 import { differences } from '../../data'
 import { useState } from 'react'
-import Button from './Button'
+import { Button } from './Button'
 
-export default function ButtonSection() {
+export const ButtonSection = () => {
   const [contentType, setContentType] = useState(null)
+
+  const buttonArr = [
+    { key: 'way', label: 'Подход' },
+    { key: 'easy', label: 'Доступность' },
+    { key: 'program', label: 'Концентрация' },
+  ]
 
   return (
     <section>
       <h3>Чем мы отличаемся от других</h3>
 
-      <Button isActive={contentType === 'way'} onClick={() => setContentType('way')}>
-        Подход
-      </Button>
-      <Button isActive={contentType === 'easy'} onClick={() => setContentType('easy')}>
-        Доступность
-      </Button>
-      <Button isActive={contentType === 'program'} onClick={() => setContentType('program')}>
-        Концентрация
-      </Button>
+      {buttonArr.map(({ key, label }) => (
+        <Button key={key} isActive={contentType === key} onClick={() => setContentType(key)}>
+          {label}
+        </Button>
+      ))}
 
-      {!contentType && <p>нажми на кнопку</p>}
+      {contentType ? <p>{differences[contentType]}</p> : <p>нажми на кнопку</p>}
 
-      {contentType && <p>{differences[contentType]}</p>}
+      <p>{differences[contentType]}</p>
     </section>
   )
 }
