@@ -1,9 +1,10 @@
+import styles from './WayToTeach.module.scss'
+
 export default function WayToTeach({ title, description }) {
   return (
     <li>
       <p>
-        {/* TODO  избавиться от strong, сделать через class */}
-        <strong>{title} </strong> {description}
+        <span className={`${styles.strong}`}>{title} </span> {description}
       </p>
     </li>
   )

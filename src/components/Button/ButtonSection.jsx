@@ -4,6 +4,7 @@ import Button from './Button'
 
 export default function ButtonSection() {
   const [contentType, setContentType] = useState(null)
+
   return (
     <section>
       <h3>Чем мы отличаемся от других</h3>

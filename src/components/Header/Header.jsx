@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from '/logo-name.svg'
+import style from './Header.module.scss'
 
 export default function Header() {
   const [now, setNow] = useState(new Date())
-  // TODO clear Interval
-  setInterval(() => setNow(new Date()), 1000)
 
+  useEffect(() => {
+    const intervalId = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(intervalId)
+  })
   return (
-    <header>
+    <header className={`${style.header}`}>
       <img src={logo} alt={'Result'} />
-      {/* <h3>Result University</h3> */}
 
       <span>Время сейчас: {now.toLocaleTimeString()}</span>
     </header>
