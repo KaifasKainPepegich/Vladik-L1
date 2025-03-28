@@ -1,4 +1,4 @@
-import styles from './FeedbackSection.module.scss'
+import style from './FeedbackSection.module.scss'
 
 export const FeedbackSection = () => {
   return (
@@ -7,7 +7,7 @@ export const FeedbackSection = () => {
 
       <form>
         <label htmlFor='name'>Какие ваши полномочия?</label>
-        <input type='text' id='name' className={styles.control} />
+        <input type='text' id='name' className={style.control} />
       </form>
     </section>
   )

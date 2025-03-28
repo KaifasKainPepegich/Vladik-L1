@@ -1,19 +1,11 @@
 import React from 'react'
-import styles from './IntroSection.module.scss'
+import style from './IntroSection.module.scss'
 
 export const IntroSection = () => {
   return (
     <section>
-      <h1 className='centered'>Result University</h1>
-      <h3 className='centered'>Пивотека для форнтов, мы тебе поможем , будь здоров!</h3>
+      <h1 className={style.centered}>Result University</h1>
+      <h3 className={style.centered}>Пивотека для форнтов, мы тебе поможем , будь здоров!</h3>
     </section>
   )
 }
-// const e = React.createElement
-
-// export function IntroSection() {
-//   return e('section', null, [
-//     e('h1', { className: styles.centered, key: 1 }, 'Result University'),
-//     e('h3', { className: styles.second, key: 2 }, 'Пивотека для форнтов, мы тебе поможем , будь здоров!'),
-//   ])
-// }
