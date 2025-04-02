@@ -9,7 +9,7 @@ export const Header = () => {
     const intervalId = setInterval(() => setNow(new Date()), 1000)
 
     return () => clearInterval(intervalId)
-  })
+  }, [])
 
   return (
     <header className={style.header}>

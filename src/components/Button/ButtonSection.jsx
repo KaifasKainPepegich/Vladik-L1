@@ -5,7 +5,7 @@ import { Button } from './Button'
 export const ButtonSection = () => {
   const [contentType, setContentType] = useState(null)
 
-  const buttonArr = [
+  const contentButtons = [
     { key: 'way', label: 'Подход' },
     { key: 'easy', label: 'Доступность' },
     { key: 'program', label: 'Концентрация' },
@@ -15,7 +15,7 @@ export const ButtonSection = () => {
     <section>
       <h3>Чем мы отличаемся от других</h3>
 
-      {buttonArr.map(({ key, label }) => (
+      {contentButtons.map(({ key, label }) => (
         <Button key={key} isActive={contentType === key} onClick={() => setContentType(key)}>
           {label}
         </Button>

@@ -1,8 +1,13 @@
 import style from './Button.module.scss'
+import clsx from 'clsx'
 
 export const Button = ({ children, onClick, isActive }) => {
   return (
-    <button className={`${style.button} ${isActive ? style.active : ''}`} onClick={onClick}>
+    <button
+      className={clsx(style.button, {
+        [style.active]: isActive,
+      })}
+      onClick={onClick}>
       {children}
     </button>
   )
