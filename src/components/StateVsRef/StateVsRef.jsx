@@ -11,16 +11,15 @@ export const StateVsRef = () => {
     }
   }
 
-  // prettier-ignore
   return (
     <div>
       <h3>Текст справа: {show && input.current.value}</h3>
       <input
-			  ref={input} 
-				type='text' 
-				onKeyDown={handleKeyDown}  
-				className={style.control} 
-			/>
+        ref={input}
+        type='text'
+        onKeyDown={handleKeyDown}
+        className={style.control}
+      />
     </div>
   )
 }

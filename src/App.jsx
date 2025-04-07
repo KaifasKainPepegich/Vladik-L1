@@ -5,6 +5,7 @@ import { IntroSection } from './components/IntroSection/IntroSection'
 import { TabsSection } from './components/TabsSection/TabsSection'
 import { useState } from 'react'
 import { FeedbackSection } from './components/FeedbackSection/FeedbackSection'
+import { EffectSection } from './components/EffectSection/EffectSection'
 
 export const App = () => {
   const [tab, setTab] = useState('feedback')
@@ -20,6 +21,8 @@ export const App = () => {
         )
       case 'feedback':
         return <FeedbackSection />
+      case 'effect':
+        return <EffectSection />
       default:
         return <div>Ошибочка,выходим из машины</div>
     }

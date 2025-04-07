@@ -17,7 +17,7 @@ export const FeedbackSection = () => {
     <section>
       <h3>Обратная связь</h3>
 
-      <form className={style.margin}>
+      <form className={style.wrapper}>
         <label htmlFor='name'>Какие ваши полномочия?</label>
         <input
           type='text'
